@@ -11,8 +11,10 @@ const startText = document.querySelector('.middle');
 startText.setAttribute('style', 'white-space: pre;');
 outcome.setAttribute('style', 'white-space: pre;');
 startText.textContent = "New game of Rock, Paper, Scissors? \r\n";
-startText.textContent += "Make your choice to start the game";
+startText.textContent += "Make your choice to start the game \r\n";
+startText.textContent += "First to win 5 wins! \r\n";
 
+// Initializing the game
 let wins = 0;
 let losses = 0;
 let ties = 0;
@@ -71,17 +73,14 @@ function playRound(playerInput, computerInput) {
     scoreUpdate();
 }
 
-// rock.addEventListener('click',playRound('rock',computerPlay));
 rock.addEventListener('click', function() {
     playRound('rock',computerPlay());
 });
 
-// paper.addEventListener('click',playRound('paper',computerPlay));
 paper.addEventListener('click', function() {
     playRound('paper',computerPlay());
 });
 
-// scissors.addEventListener('click',playRound('scissors',computerPlay));
 scissors.addEventListener('click',function() {
     playRound('scissors',computerPlay());
 });
